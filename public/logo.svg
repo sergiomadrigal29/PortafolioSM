@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .tag { font: bold 70px 'Source Code Pro', monospace; }
+        .name { font: 35px 'Poppins', sans-serif; }
+    </style>
+    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle">
+        <tspan class="tag" fill="#38bdf8">&lt;</tspan>
+        <tspan class="tag" fill="#38bdf8">S</tspan>
+        <tspan class="tag" fill="#9ca3af">M</tspan>
+        <tspan class="tag" fill="#38bdf8">/&gt;</tspan>
+    </text>
+    <text class="name" x="50%" y="80%" dominant-baseline="middle" text-anchor="middle"
+        fill="#38bdf8">
+        Sergio Madrigal
+    </text>
+</svg>

@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import CardElegante from '../components/CardElegante.jsx';
+import Section from '../components/Section.jsx';
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <Section>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10 mt-10">
+      <!-- Imagen con marco elegante -->
+      <div class="flex-shrink-0 relative group">
+        <img 
+          src="/avatar.jpg" 
+          alt="Avatar" 
+          class="w-44 h-44 md:w-56 md:h-56 object-cover rounded-2xl shadow-2xl border-4 border-[var(--plateado)] bg-white/10 ring-4 ring-[var(--gris-claro)] ring-offset-4 ring-offset-[var(--azul-marino)] transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 rounded-2xl ring-2 ring-[var(--azul-marino)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      </div>
+      <!-- Descripción y botón -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-3">
+        <h1 class="text-3xl md:text-5xl font-bold text-white z-10 mt-4 md:mt-0">
+          ¡Hola! Soy 
+          <span class="text-[var(--azul-marino)] bg-[var(--gris-perla)] px-2 rounded-lg ml-2">Sergio Madrigal</span>
+        </h1>
+        <p class="text-lg md:text-xl text-[var(--gris-claro)] max-w-xl z-10 mt-2">
+          Estudiante de Ingeniería en Sistemas de información con pasión por la tecnología. Me encanta aprender nuevas tecnologías y crear soluciones innovadoras.
+        </p>
+        <a 
+          href="/SergioCV.pdf" 
+          download 
+          class="inline-flex items-center gap-2 px-6 py-2 mt-2 rounded-xl bg-gradient-to-r from-sky-400 to-blue-600 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+          </svg>
+          Descargar CV
+        </a>
+      </div>
+    </div>
+    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 z-10">
+      <CardElegante className="text-center" client:load>
+        <h2 class="text-xl font-bold mb-2">Frontend</h2>
+        <p class="text-[var(--azul-marino)]">Experiencia creando aplicaciones web usando FrameWorks como son: React JS, Angular y Astro.</p>
+      </CardElegante>
+      <CardElegante className="text-center" client:load>
+        <h2 class="text-xl font-bold mb-2">Backend</h2>
+        <p class="text-[var(--azul-marino)]">Experiencia en manejo de API REST usando Java, C# y Python, con frameworks como Spring Boot, .NET y Django.</p>
+      </CardElegante>
+      <CardElegante className="text-center" client:load>
+        <h2 class="text-xl font-bold mb-2">Bases de Datos</h2>
+        <p class="text-[var(--azul-marino)]">Dominio de bases de datos SQL/NoSQL: SQL Server, MySQL, PostgreSQL y Firebase.</p>
+      </CardElegante>
+      <div class="lg:col-span-3 flex justify-center" >
+        <CardElegante className="text-center max-w-md w-full" client:load>
+          <h2 class="text-xl font-bold mb-2">Redes y AWS</h2>
+          <p class="text-[var(--azul-marino)]">Conocimientos en redes con dispositivos Cisco y gestión de servicios en la nube utilizando AWS.</p>
+        </CardElegante>
+      </div>
+    </div>
+  </Section>
+</Layout>

@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import CardElegante from '../components/CardElegante.jsx';
+import Section from '../components/Section.jsx';
+---
+
+<Layout>
+  <Section>
+    <h2 class="text-3xl font-bold text-white mb-6">Proyectos destacados</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <CardElegante className="flex flex-col items-center" client:load>
+        <img src="/Crud.webp" alt="CRUD .NET" class="w-24 h-24 mb-3 rounded-xl shadow-lg object-cover bg-white/20" />
+        <h3 class="text-xl font-semibold text-[var(--azul-marino)] mb-2">CRUD de Empleados (.NET & SQL Server)</h3>
+        <p class="text-[var(--azul-marino)] mb-3 text-center">
+          Aplicación CRUD profesional desarrollada en C# con .NET, implementando arquitectura robusta y conexión a base de datos SQL Server. Permite la gestión eficiente de empleados con operaciones seguras y una interfaz intuitiva.
+        </p>
+        <a href="https://github.com/sergiomadrigal29/CrudC-" class="text-[var(--azul-marino)] hover:underline hover:text-[var(--plateado)] font-semibold">Ver más</a>
+      </CardElegante>
+      <CardElegante className="flex flex-col items-center" client:load>
+        <img src="/lading.webp" alt="Landing Page React" class="w-24 h-24 mb-3 rounded-xl shadow-lg object-cover bg-white/20" />
+        <h3 class="text-xl font-semibold text-[var(--azul-marino)] mb-2">Landing Page React</h3>
+        <p class="text-[var(--azul-marino)] mb-3 text-center">
+          Landing page moderna y responsiva creada con React. Diseño atractivo, optimizada para conversión y experiencia de usuario, ideal para presentar productos o servicios de manera profesional.
+        </p>
+        <a href="https://github.com/sergiomadrigal29/lading-React" class="text-[var(--azul-marino)] hover:underline hover:text-[var(--plateado)] font-semibold">Ver más</a>
+      </CardElegante>
+      <CardElegante className="flex flex-col items-center" client:load>
+        <img src="/empleado.webp" alt="CRUD Java Spring Boot" class="w-24 h-24 mb-3 rounded-xl shadow-lg object-cover bg-white/20" />
+        <h3 class="text-xl font-semibold text-[var(--azul-marino)] mb-2">Gestión de Empleados (Java & Spring Boot)</h3>
+        <p class="text-[var(--azul-marino)] mb-3 text-center">
+          Sistema CRUD desarrollado en Java con Spring Boot y MySQL. Permite administrar empleados de forma eficiente, integrando buenas prácticas de backend y una interfaz clara para el usuario.
+        </p>
+        <a href="https://github.com/sergiomadrigal29/Empleado-spring-boot" class="text-[var(--azul-marino)] hover:underline hover:text-[var(--plateado)] font-semibold">Ver más</a>
+      </CardElegante>
+      <CardElegante className="flex flex-col items-center" client:load>
+        <img src="/Pokemon.webp" alt="Pokémon Web Angular" class="w-24 h-24 mb-3 rounded-xl shadow-lg object-cover bg-white/20" />
+        <h3 class="text-xl font-semibold text-[var(--azul-marino)] mb-2">Pokémon Web (Angular & Spring Boot)</h3>
+        <p class="text-[var(--azul-marino)] mb-3 text-center">
+          Plataforma web desarrollada en Angular que consume una API propia en Java Spring Boot y la API oficial de Pokémon. Los datos se gestionan desde una base de datos y se integran con información en tiempo real.
+        </p>
+        <a href="https://github.com/sergiomadrigal29/PokemonApp" class="text-[var(--azul-marino)] hover:underline hover:text-[var(--plateado)] font-semibold">Ver más</a>
+      </CardElegante>
+    </div>
+    <p class="mt-8 text-center text-[var(--plateado)]">
+      ¿Quieres ver más proyectos? <a href="https://github.com/sergiomadrigal29" class="text-white hover:underline">Visita mi GitHub</a>
+    </p>
+  </Section>
+</Layout>

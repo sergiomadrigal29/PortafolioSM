@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import CardElegante from '../components/CardElegante.jsx';
+import Section from '../components/Section.jsx';
+import ContactForm from '../components/ContactForm.jsx';
+---
+
+<Layout>
+  <Section client:load>
+    <h2 class="text-3xl font-bold text-white mb-6 text-center">Contacto</h2>
+    <CardElegante className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto" client:load>
+      <ContactForm client:load />
+    </CardElegante>
+  </Section>
+</Layout>

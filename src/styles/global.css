@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+:root {
+  --azul-marino: #001f3f;
+  --gris-perla: #f2f4f7;
+  --blanco-nieve: #ffffff;
+  --gris-claro: #d9e2ec;
+  --plateado: #c0c0c0;
+}
+
+body {
+  background: var(--azul-marino);
+  min-height: 100vh;
+  color: var(--blanco-nieve);
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Detalles decorativos elegantes */
+.bg-blob-perla {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--gris-perla);
+  opacity: 0.13;
+  border-radius: 50% 60% 40% 60% / 60% 40% 60% 40%;
+  filter: blur(10px);
+  z-index: 0;
+}
+.bg-blob-plateado {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: var(--plateado);
+  opacity: 0.1;
+  border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+/* Tarjetas elegantes */
+.card-elegante {
+  background: var(--gris-perla);
+  color: #222;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--gris-claro);
+  backdrop-filter: blur(2px);
+}
+
+/* Botón elegante */
+.btn-elegante {
+  background: var(--azul-marino);
+  color: var(--blanco-nieve);
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border: 1px solid var(--plateado);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-elegante:hover {
+  background: var(--plateado);
+  color: var(--azul-marino);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--azul-marino);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--plateado);
+  border-radius: 4px;
+}
+
+a {
+  transition: color 0.2s, background 0.2s;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
