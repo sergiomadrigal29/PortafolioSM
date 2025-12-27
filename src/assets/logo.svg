@@ -9,8 +9,8 @@
         <tspan class="tag" fill="#9ca3af">M</tspan>
         <tspan class="tag" fill="#38bdf8">/&gt;</tspan>
     </text>
-    <text class="name" x="50%" y="80%" dominant-baseline="middle" text-anchor="middle"
+    <!-- <text class="name" x="50%" y="80%" dominant-baseline="middle" text-anchor="middle"
         fill="#38bdf8">
         Sergio Madrigal
-    </text>
+    </text> -->
 </svg>
