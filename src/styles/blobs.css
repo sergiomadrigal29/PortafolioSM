@@ -1,0 +1,21 @@
+/* Blobs decorativos usados en las secciones */
+.bg-blob-perla {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--gris-perla);
+  opacity: 0.13;
+  border-radius: 50% 60% 40% 60% / 60% 40% 60% 40%;
+  filter: blur(10px);
+  z-index: 0;
+}
+.bg-blob-plateado {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: var(--plateado);
+  opacity: 0.1;
+  border-radius: 60% 40% 60% 40% / 40% 60% 40% 60%;
+  filter: blur(8px);
+  z-index: 0;
+}

@@ -1,0 +1,10 @@
+/* Card elegante */
+.card-elegante {
+  background: var(--gris-perla);
+  color: #222;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--gris-claro);
+  backdrop-filter: blur(2px);
+}

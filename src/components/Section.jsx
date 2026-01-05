@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/blobs.css'
 
 const Section = ({ children, className = "" }) => (
   <section
@@ -14,6 +15,6 @@ const Section = ({ children, className = "" }) => (
     ></div>
     {children}
   </section>
-);
+); 
 
 export default Section;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../../styles/navbar.css'
 import NavBrand from './NavBrand'
 import NavLinks from './NavLinks'
 import NavTogger from './NavTogger'
@@ -7,7 +8,7 @@ import Button from '../ui/Button'
 const Navbar = () => {
   const [open, setOpen] = useState(false)
 
-  // close on Escape
+  // cerrar con Escape
   useEffect(() => {
     function onKey(e) {
       if (e.key === 'Escape') setOpen(false)
@@ -16,7 +17,7 @@ const Navbar = () => {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  // lock body scroll when drawer is open
+  // bloquear scroll del body cuando el drawer esté abierto
   useEffect(() => {
     const prev = document.body.style.overflow
     document.body.style.overflow = open ? 'hidden' : prev
@@ -29,7 +30,7 @@ const Navbar = () => {
     <nav className='navbar-container'>
       <div className='navbar-content'>
         <div className="nav-left">
-          {/*<NavBrand /> */}
+          <NavBrand /> 
         </div>
 
         <div className="nav-right">
@@ -40,14 +41,14 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile toggler */}
+          {/* Toggle móvil */}
           <div className="md:hidden">
             <NavTogger isOpen={open} onToggle={() => setOpen((s) => !s)} />
           </div>
         </div>
       </div>
 
-      {/* Overlay (click outside to close) */}
+      {/* Overlay (clic fuera para cerrar) */}
       <div
         className={`mobile-overlay ${open ? 'open' : ''}`}
         onClick={() => setOpen(false)}
@@ -62,7 +63,7 @@ const Navbar = () => {
         aria-hidden={!open}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button (red) */}
+        {/* Botón de cierre (rojo) */}
         <button
           className="mobile-close-button"
           aria-label="Cerrar menú"

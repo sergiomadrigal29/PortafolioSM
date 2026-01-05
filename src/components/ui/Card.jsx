@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/card.css'
 
 export default function Card({ children, className = '' }) {
   return (
@@ -6,4 +7,4 @@ export default function Card({ children, className = '' }) {
       {children}
     </div>
   )
-}
+} 
